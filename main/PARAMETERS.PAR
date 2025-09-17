@@ -1,0 +1,58 @@
+1
+2              
+0
+0
+1.0d+0
+0.11734463d+0
+0.06946328d+0
+0.d+0
+0.d+0
+0.0d+0
+0.0d+0
+0.0d+0
+0.0d+0
+0.07344633d+0
+0.8d-01
+0.8d+0
+0.018d+0
+0.01d+0
+0.04d+0
+8.0d+0
+1.0d+01
+40
+0.35d-02
+164
+28
+20
+40
+
+0.83333333333333333d-1
+
+	num_props
+	num_blades
+	num_hub
+	num_fuselage
+	rotor_radius
+	blade_chord
+	blade_tip_chord
+	blade_twist
+	alfa
+	precone
+	thetha x
+	thetha y
+	thetha z
+	hub_radius
+	gap_frac
+	major_rad
+	min_rad
+	length
+	width
+	revs
+	delta_psi
+	slow_start
+	core
+	blade_ns
+	blade_nc
+	nmaj 
+	nmin 
+
