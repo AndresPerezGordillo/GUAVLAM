@@ -1,0 +1,59 @@
+1.	Unzip the file "open64_sdk1.0.tar.bz2"
+2.	into a "Terminal" window, run the installation script "install.sh" as root user, using the comand "./install.sh"
+3.	Follow the prompts to select and install the components
+4.	Open the file "ReadMe.txt"
+5.	It is neccesary to know the directory of installation of the open64, in this case was:
+	/home/andres/amdsdk	
+	Open a "Terminal"
+	for $AMDSDK_ROOT write the next comand
+	echo export PATH=$PATH:/home/andres/amdsdk/v1.0 >> ~/.bashrc
+	for $DOCROOT write the next comand
+	echo export PATH=$PATH:/home/andres/amdsdk/v1.0/pdf >> ~/.bashrc
+	for $OPEN64_TC write the next comand
+	echo export PATH=$PATH:/home/andres/amdsdk/v1.0/x86_open64-4.2.4/bin >> ~/.bashrc
+	for $ACML write the next comands
+	echo export PATH=$PATH:/home/andres/amdsdk/v1.0/acml/open64_64/lib >> ~/.bashrc
+	echo export PATH=$PATH:/home/andres/amdsdk/v1.0/acml/open64_64/include >> ~/.bashrc
+	echo export PATH=$PATH:/home/andres/amdsdk/v1.0/acml/open64_64_mp/lib >> ~/.bashrc
+	echo export PATH=$PATH:/home/andres/amdsdk/v1.0/acml/open64_64_mp/include >> ~/.bashrc
+	for $ACML_GPU write the next comands
+	echo export PATH=$PATH:/home/andres/amdsdk/v1.0/acml_gpu/gfortran64/lib >> ~/.bashrc
+	echo export PATH=$PATH:/home/andres/amdsdk/v1.0/acml_gpu/gfortran64/include >> ~/.bashrc
+	for $AMD_LIBM write the next comands
+	echo export PATH=$PATH:/home/andres/amdsdk/v1.0/amdlibm-2-1-lin64/lib/dynamic >> ~/.bashrc
+	echo export PATH=$PATH:/home/andres/amdsdk/v1.0/amdlibm-2-1-lin64/lib/static >> ~/.bashrc
+	echo export PATH=$PATH:/home/andres/amdsdk/v1.0/amdlibm-2-1-lin64/include >> ~/.bashrc
+	Close Terminal
+6.	on a new Terminal write
+	echo $PATH | tr ":" "\n" | nl
+	To show the contents of the PATH
+7.	Unzip the file Codigo_UVLM.ZIP
+8.	Go to the folder /Codigo_UVLM/Cвdigo colmenares/
+	Unzip the file juaneco2710-guavlam-code-792357391fff (1).zip
+9.	Go to the folder
+	/Documents/GUAVLAM/Codigo_UVLM/Cвdigo colmenares/juaneco2710-guavlam-code-792357391fff/main
+10.	Open the file Makefile
+	It is neccesary to create the ACML variable, to do this it is neccesary to know the directory of installation of the open64, in this case was:
+	/home/andres/amdsdk
+	Then, after
+	OBJS_DIR = obj/
+	EXE_DIR = bin/
+	write:
+	ACML = /home/andres/amdsdk/v1.0/acml/open64_64
+	Save the changes in Makefile and close it.
+11.	On Terminal write
+	make all
+12.	If the error cannot find crti.o: No such file or directory
+	appears then write:
+	sudo find /usr/ -name crti*
+	This command must give something like: /usr/lib/x86_64-linux-gnu/crti.o
+	Then write:
+	LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LIBRARY_PATH export LIBRARY_PATH
+13.	On Terminal write
+	make all
+14. 	Thats All GUAVLAM is ready to use.
+	
+	
+
+
+
